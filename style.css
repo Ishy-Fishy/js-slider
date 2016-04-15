@@ -40,10 +40,10 @@
 	opacity: 0.9;
 }
 #prev{
-	background: #000 url('prev.png') no-repeat center;
+	background: #000 url('img/prev.png') no-repeat center;
 	left: 0px;
 }
 #next{
-	background: #000 url('next.png') no-repeat center;
+	background: #000 url('img/next.png') no-repeat center;
 	right: 0px;
 }
