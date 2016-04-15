@@ -1,46 +1,24 @@
-jQuery(document).ready(function ($) {
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="slider.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
 
-  $('#checkbox').change(function(){
-    setInterval(function () {
-        moveRight();
-    }, 3000);
-  });
-
-	var slideCount = $('#slider ul li').length;
-	var slideWidth = $('#slider ul li').width();
-	var slideHeight = $('#slider ul li').height();
-	var sliderUlWidth = slideCount * slideWidth;
-
-	$('#slider').css({ width: slideWidth, height: slideHeight });
-
-	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-
-    $('#slider ul li:last-child').prependTo('#slider ul');
-
-    function moveLeft() {
-        $('#slider ul').animate({
-            left: + slideWidth
-        }, 200, function () {
-            $('#slider ul li:last-child').prependTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    function moveRight() {
-        $('#slider ul').animate({
-            left: - slideWidth
-        }, 200, function () {
-            $('#slider ul li:first-child').appendTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    $('a.control_prev').click(function () {
-        moveLeft();
-    });
-
-    $('a.control_next').click(function () {
-        moveRight();
-    });
-
-});
+	<body>
+		<div class="container">
+			<div class="slider_wrapper">
+				<ul id="image_slider">
+					<li><img src="https://dl.dropboxusercontent.com/u/65639888/image/1.jpg"></li>
+					<li><img src="https://dl.dropboxusercontent.com/u/65639888/image/4.jpg"></li>
+					<li><img src="https://dl.dropboxusercontent.com/u/65639888/image/5.jpg"></li>
+					<li><img src="https://dl.dropboxusercontent.com/u/65639888/image/1.jpg"></li>
+					<li><img src="https://dl.dropboxusercontent.com/u/65639888/image/4.jpg"></li>
+					<li><img src="https://dl.dropboxusercontent.com/u/65639888/image/5.jpg"></li>
+				</ul>
+				<span class="nvgt" id="prev"></span>
+				<span class="nvgt" id="next"></span>
+			</div>
+		</div>
+	</body>
